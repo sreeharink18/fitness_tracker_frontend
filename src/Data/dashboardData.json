@@ -1,0 +1,41 @@
+{
+  "user": {
+    "name": "Athlete",
+    "streak": 4,
+    "unit": "KG"
+  },
+  "metrics": {
+    "totalVolume7Day": "28,580 kg",
+    "workoutsThisWeek": 6,
+    "activeExercises": 19,
+    "bodyPartsCount": 7
+  },
+  "todayActivity": {
+    "status": "COMPLETED",
+    "volume": "1,560 kg",
+    "setsDone": 4,
+    "exercisesCount": 4,
+    "exercisesPerformed": [
+      { "id": "1", "name": "Barbell Flat Bench Press", "sets": "1 set completed", "peakLoad": "85 kg" },
+      { "id": "2", "name": "Incline Dumbbell Press", "sets": "1 set completed", "peakLoad": "26 kg" },
+      { "id": "3", "name": "Chest Dips", "sets": "1 set completed", "peakLoad": "20 kg" }
+    ]
+  },
+  "workoutTemplates": [
+    {
+      "id": "t1",
+      "title": "Push Hypertrophy",
+      "muscles": "Chest • Shoulders • Triceps"
+    },
+    {
+      "id": "t2",
+      "title": "Legs & Core Strength",
+      "muscles": "Quads • Hamstrings • Abs"
+    }
+  ],
+  "workoutHistory": [
+    { "id": "h1", "date": "Sep 9", "title": "Chest & Arms Power", "details": "3 exercises • 9 sets", "volume": "5,120 kg", "duration": "42m duration" },
+    { "id": "h2", "date": "Sep 9", "title": "Push Power (Chest & Arms)", "details": "2 exercises • 2 sets", "volume": "940 kg", "duration": "45m duration" },
+    { "id": "h3", "date": "Sep 9", "title": "Push Hypertrophy", "details": "4 exercises • 4 sets", "volume": "1,560 kg", "duration": "45m duration" }
+  ]
+}
