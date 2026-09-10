@@ -32,7 +32,7 @@ export const WelcomeBanner = ({ userName, streak }) => {
         
       </span>
       <div>
-        <h2 className="text-2xl font-black text-white">
+        <h2 className="text-2xl font-bold text-white">
           Welcome Back, <span className="text-cyan-400">{userName}</span>
         </h2>
         <p className="text-xs text-gray-400 mt-1">
