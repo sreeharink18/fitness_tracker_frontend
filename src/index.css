@@ -16,8 +16,51 @@ body {
     radial-gradient(ellipse 50% 30% at 10% 80%, rgba(30, 64, 175, 0.08), transparent);
   background-attachment: fixed;
 }
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 10px 18px;
+  font-family: var(--font-display);
+  font-size: 0.95rem;
+  font-weight: 600;
+  border-radius: var(--radius-md);
+  border: 1px solid transparent;
+  cursor: pointer;
+  transition: all var(--transition-normal);
+  text-decoration: none;
+  white-space: nowrap;
+}
+.btn-primary {
+  background: linear-gradient(135deg, #00d2ff, #0099ff);
+  color: #050811;
+  font-weight: 700;
+  box-shadow: 0 4px 16px rgba(0, 210, 255, 0.35);
+  transition: all 0.2s ease;
+}
+
+.btn-primary:hover {
+  box-shadow: 0 6px 24px rgba(0, 210, 255, 0.5);
+  transform: translateY(-1px);
+  filter: brightness(1.08);
+}
 .btn-sm {
   padding: 6px 12px;
   font-size: 0.85rem;
   border-radius: var(--radius-sm);
+}
+.btn-outline-blue {
+  background: rgba(0, 210, 255, 0.06);
+  border: 1px solid rgba(56, 189, 248, 0.3);
+  color: rgb(52, 197, 245)
+}
+
+.btn-outline-blue:hover {
+  background: rgba(0, 210, 255, 0.15);
+  border-color: var(--blue-primary);
+  box-shadow: 0 0 16px rgba(0, 210, 255, 0.2);
+}
+.text-color-cyan{
+  color: #38bdf8;
 }

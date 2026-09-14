@@ -20,7 +20,7 @@ export const Navbar = () => {
         </div>
         <div>
           <h1 className="text-xl font-black text-white tracking-wide">
-            AURA <span className="text-cyan-400">FIT</span>
+            AURA <span className="text-color-cyan">FIT</span>
           </h1>
           <p className="text-[12px] text-gray-400 font-semibold tracking-wider">
             STRENGTH & <br /> WORKOUT ENGINE

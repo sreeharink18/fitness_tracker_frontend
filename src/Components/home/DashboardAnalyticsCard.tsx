@@ -1,4 +1,6 @@
 import React from 'react';
+import { BarChart2, Calendar, ChevronRight } from 'lucide-react';
+import { AreaChart, Area, XAxis, YAxis, Tooltip, ResponsiveContainer } from 'recharts';
 
 export const DashboardAnalyticsCard = ({ history }) => {
   return (
@@ -7,7 +9,7 @@ export const DashboardAnalyticsCard = ({ history }) => {
       <div className="flex items-center justify-between">
         <div className="flex items-center space-x-3">
           <div className="w-10 h-10 bg-cyan-500/10 border border-cyan-500/30 rounded-xl flex items-center justify-center text-cyan-400">
-            📊
+           <BarChart2 size={20} />
           </div>
           <div>
             <h3 className="text-lg font-bold text-white">Dashboard & Analytics</h3>
@@ -15,7 +17,7 @@ export const DashboardAnalyticsCard = ({ history }) => {
           </div>
         </div>
         <button className="text-xs font-bold text-cyan-400 flex items-center space-x-1">
-          <span>Full Stats</span>
+          <span className='text-color-cyan'>Full Stats</span>
           <span>&gt;</span>
         </button>
       </div>
@@ -24,7 +26,7 @@ export const DashboardAnalyticsCard = ({ history }) => {
       <div className="p-4 bg-[#070d18] border border-gray-800/60 rounded-xl space-y-2">
         <div className="flex justify-between items-center text-xs">
           <span className="text-[10px] font-bold text-gray-400">RECENT VOLUME (KG)</span>
-          <span className="text-xs font-bold text-cyan-400">Progression Curve</span>
+          <span className="text-xs font-bold text-color-cyan">Progression Curve</span>
         </div>
         
         {/* Placeholder for SVG Curve */}
@@ -69,16 +71,16 @@ export const DashboardAnalyticsCard = ({ history }) => {
         {history.map((item) => (
           <div key={item.id} className="flex items-center justify-between p-3 bg-[#0f172a] border border-gray-800/60 rounded-xl">
             <div className="flex items-center space-x-3">
-              <span className="px-2 py-1 bg-cyan-500/10 border border-cyan-500/30 text-cyan-400 text-[10px] font-bold rounded-md">
+              <span className="px-2 py-1 bg-cyan-500/10 border border-cyan-500/30 text-color-cyan text-[12px] font-bold rounded-md">
                 {item.date}
               </span>
               <div>
-                <div className="text-xs font-bold text-white">{item.title}</div>
-                <div className="text-[10px] text-gray-400">{item.details}</div>
+                <div className="text-[14px] font-bold text-white">{item.title}</div>
+                <div className="text-[12px] text-gray-400">{item.details}</div>
               </div>
             </div>
             <div className="text-right">
-              <div className="text-xs font-black text-cyan-400">{item.volume}</div>
+              <div className="text-xs font-black text-color-cyan">{item.volume}</div>
               <div className="text-[10px] text-gray-400">{item.duration}</div>
             </div>
           </div>
@@ -86,10 +88,15 @@ export const DashboardAnalyticsCard = ({ history }) => {
       </div>
 
       {/* Explore button */}
-      <button className="w-full py-3 bg-cyan-500 hover:bg-cyan-400 text-black font-bold rounded-xl text-xs flex items-center justify-center space-x-2 shadow-lg shadow-cyan-500/20">
-        <span>📅</span>
-        <span>Explore Charts & Date History</span>
-      </button>
+       <div style={{ paddingTop: '10px', borderTop: '1px solid rgba(56, 189, 248, 0.1)' }}>
+        <button
+          className="btn btn-primary !rounded-[17px]"
+          style={{ width: '100%', padding: '15px', fontSize: '1rem' }}
+        >
+          <Calendar size={16} />
+          Explore Charts & Date History
+        </button>
+      </div>
     </div>
   );
 };

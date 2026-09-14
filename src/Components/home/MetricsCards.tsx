@@ -1,4 +1,5 @@
 import { Flame, TrendingUp, Calendar, Zap, Trophy } from 'lucide-react';
+import '../../index.css'
 
 export const MetricsCards = ({ metrics }) => {
   return (

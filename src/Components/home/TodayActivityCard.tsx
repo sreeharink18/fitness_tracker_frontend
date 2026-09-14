@@ -23,7 +23,7 @@ export const TodayActivityCard = ({ activity }) => {
       <div className="grid grid-cols-3 gap-2 p-3 bg-[#070d18] rounded-xl border border-gray-800/50 text-center">
         <div>
           <div className="text-[10px] text-gray-400 font-bold uppercase">Volume</div>
-          <div className="text-sm font-black text-cyan-400">{activity.volume}</div>
+          <div className="text-sm font-black text-color-cyan">{activity.volume}</div>
         </div>
         <div>
           <div className="text-[10px] text-gray-400 font-bold uppercase">Sets Done</div>
@@ -45,15 +45,15 @@ export const TodayActivityCard = ({ activity }) => {
         {activity.exercisesPerformed.map((item) => (
           <div key={item.id} className="flex items-center justify-between p-3 bg-[#0f172a] border border-gray-800/60 rounded-xl">
             <div className="flex items-center space-x-3">
-              <div className="w-8 h-8 rounded-lg bg-cyan-500/10 text-cyan-400 flex items-center justify-center text-xs">
+              <div className="w-8 h-8 rounded-lg bg-cyan-500/10 text-color-cyan flex items-center justify-center text-xs">
                 <DumbbellIcon size={20}/>
               </div>
               <div>
-                <div className="text-xs font-bold text-white">{item.name}</div>
-                <div className="text-[10px] text-gray-400">{item.sets}</div>
+                <div className="text-[14px] font-bold text-white">{item.name}</div>
+                <div className="text-[11px] text-gray-300">{item.sets}</div>
               </div>
             </div>
-            <div className="text-xs font-black text-cyan-400">{item.peakLoad}</div>
+            <div className="text-xs font-black text-color-cyan">{item.peakLoad}</div>
           </div>
         ))}
       </div>

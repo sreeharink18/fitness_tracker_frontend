@@ -33,7 +33,7 @@ export const WelcomeBanner = ({ userName, streak }) => {
       </span>
       <div>
         <h2 className="text-2xl font-bold text-white">
-          Welcome Back, <span className="text-cyan-400">{userName}</span>
+          Welcome Back, <span className="text-color-cyan">{userName}</span>
         </h2>
         <p className="text-xs text-gray-400 mt-1">
           Track your body splits, crush progressive overload, and monitor your personal records.

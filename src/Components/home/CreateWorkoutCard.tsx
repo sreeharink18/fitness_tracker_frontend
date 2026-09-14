@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Plus, Dumbbell, Layers, ChevronRight, Sparkles, FolderPlus, ArrowRight } from 'lucide-react';
-
+import  '../../index.css'
 export const CreateWorkoutCard = ({ templates }) => {
   const [selectedId, setSelectedId] = useState(templates[0]?.id);
 
@@ -27,17 +27,17 @@ export const CreateWorkoutCard = ({ templates }) => {
       <div className="flex items-center gap-3 p-3 bg-[#070d18] border border-gray-800/60 rounded-xl text-xs">
 
         {/* Icon */}
-        <Layers size={16} color="#00d2ff" className="shrink-0" />
+        <Layers size={16} color="#38bdf8" className="shrink-0" />
 
         {/* Dynamic content */}
         <span className="text-gray-300 font-large min-w-0 flex-1">
-          <span className="text-cyan-400 font-bold">7</span> Body Parts •{" "}
-          <span className="text-cyan-400 font-bold">18</span> Sub-Parts •{" "}
-          <span className="text-cyan-400 font-bold">19</span> Exercises
+          <span className="text-grey-800 font-bold">7</span> Body Parts •{" "}
+          <span className="text-grey-800 font-bold">18</span> Sub-Parts •{" "}
+          <span className="text-grey-800 font-bold">19</span> Exercises
         </span>
 
         {/* Manage button */}
-        <button className="text-cyan-400 font-bold text-xs flex items-center gap-1 shrink-0">
+        <button className="text-[#00d2ff] font-bold text-xs flex items-center gap-1 shrink-0">
           <span>Manage</span>
           <ChevronRight size={14} />
         </button>
@@ -164,19 +164,28 @@ export const CreateWorkoutCard = ({ templates }) => {
 
       {/* Quick Actions Grid */}
       <div className="grid grid-cols-2 gap-2 pt-2">
-        <button className="py-2.5 bg-cyan-500 hover:bg-cyan-400 text-black font-bold rounded-xl text-xs flex items-center justify-center space-x-1 shadow-lg shadow-cyan-500/20">
-          <span>🏋️</span>
-          <span>Start Selected</span>
-        </button>
-        <button className="py-2.5 bg-[#121c2e] hover:bg-gray-800 text-white font-bold rounded-xl text-xs border border-gray-700">
+         <button
+            className="btn btn-primary !rounded-[12px]"
+            style={{ flex: 1, padding: '10px 14px', fontSize: '0.88rem' }}
+          >
+            <Dumbbell size={18} />
+            Start Selected
+          </button>
+        <button className="py-2.5 bg-[#121c2e] hover:bg-gray-800 text-white font-bold rounded-xl text-xs border border-gray-700 !rounded-[12px]">
           Blank Session
         </button>
-        <button className="py-2 bg-[#0a1526] text-cyan-400 rounded-xl text-xs font-bold border border-cyan-500/30">
-          + Add Exercise
-        </button>
-        <button className="py-2 bg-[#0a1526] text-cyan-400 rounded-xl text-xs font-bold border border-cyan-500/30">
-          📋 Edit Structure
-        </button>
+          <button
+            className="btn btn-outline-blue !rounded-[12px]"
+            style={{ flex: 1, padding: '10px 10px', fontSize: '0.78rem' }}
+          >
+            <Plus size={17} /> Add Exercise
+          </button>
+         <button
+            className="btn btn-outline-blue !rounded-[12px]"
+            style={{ flex: 1, padding: '10px 10px', fontSize: '0.78rem' }}
+          >
+            <FolderPlus size={17} /> Edit Structure
+          </button>
       </div>
     </div>
   );
